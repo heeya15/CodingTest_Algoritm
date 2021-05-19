@@ -13,29 +13,22 @@ s	       n	result
 "z"	       1	"a"
 "a B z"	   4	"e F d"
 
-# 아직 테스트케이스 부분 통과를 못하였음 -- 추가 해결 방안 생각...
+- ord, chr 함수는 생각을 하였지만, isupper, islower 함수 생각을 못함.
+ 그리고, %26을 해주는 이유 ? z 또는 Z의 범위를 넘어가지 않도록 하기 위해
+
 """
 
-
 def solution(s, n):
-    answer = ''   
-    for i in s:  
-       temp = 0
-       if ord(i)>=ord('a') and ord(i)<ord('z') or ord(i) >=ord('A') and ord(i)< ord('Z') :
-          temp = ord(i) + n
-          print(temp)
-          if temp >ord('z') :
-             temp -= 26
-          if temp >ord('Z'):
-             temp -= 26 
-          
-          answer += chr(temp)
-                   
-       if i == ' ':
-          answer += ' '
-       if i == 'z' or i == 'Z' : # 문제 있는 부분 .
-          temp = ord(i)-26 + n
-          answer += chr(temp)# a 이전 아스키코드 문자 숫자로 가서 + n 만큼 이동해준다.                   
-    return answer
+    s = list(s) 
+    print(ord('Z'))
+    for i in range(len(s)): 
+        if s[i].isupper(): # 대문자인 경우
+            s[i]=chr((ord(s[i])-ord('A')+ n)%26 + ord('A')) 
+        elif s[i].islower(): # 소문자인 경우 
+            s[i]=chr((ord(s[i])-ord('a')+ n)%26 + ord('a')) 
+    print(s)    
+    return ''.join(s)
 
-print(solution("a B z", 4))
+
+
+print(solution("a x y K", 4))
