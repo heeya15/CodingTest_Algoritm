@@ -50,7 +50,7 @@ public class Main_G5_14503_로봇청소기_구현방법 {
 					int nr = r + dr[dir];
 					int nc = c + dc[dir];
 					
-					if (nr < 0 || nc < 0 || nr > N || nc > M ) continue;
+					if (nr < 0 || nc < 0 || nr >= N || nc >= M ) continue;
 					
 					// a. 왼쪽 방향 청소하는 공간 존재할 경우.
 					if(map[nr][nc] == 0) {
@@ -81,9 +81,9 @@ public class Main_G5_14503_로봇청소기_구현방법 {
 					c = back_nc;
 				}
 				// d. 경계값을 넘거나 "벽"이면서, 후진도 할 수 없는 경우에 작동 멈춤.
-				else if (back_nr < 0 || back_nc < 0 || back_nr > N || back_nc > M 
+				else if (back_nr < 0 || back_nc < 0 || back_nr >= N || back_nc >= M 
 						|| map[back_nr][back_nc] == 1 )break top;
 			}
-		}
+		}// 바깥 while end
 	}
 }
