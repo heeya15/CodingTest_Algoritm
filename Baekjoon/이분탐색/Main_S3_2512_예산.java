@@ -30,7 +30,7 @@ public class Main_S3_2512_예산 {
 		System.out.println(res);
 	}
 	private static long binarySearch(long left, long right, int [] arr) {
-		// 이분탐색은 "0부터" [ 배열의 마지막 가장 큰 값 사이(최대 예산 요청) ]를 "이분 탐색"하면서 찾음.
+		// 이분탐색은 "0부터" [ 배열의 마지막 가장 큰 값 사이(예산 요청값 사이) ]를 "이분 탐색"하면서 찾음.
 		while(left <= right) {
 			long mid = (left + right) / 2; // 상한 액.
 			long sum = 0; // 모든 지방 예산의 합을 저장 받을 변수
