@@ -30,7 +30,7 @@ public class Lv2_거리두기확인하기 {
 		System.out.println(solution(places)); // 출력 : [1, 0, 1, 1, 1]
 	}
 	// 자리에 앉아있는 응시자들 정보와
-    // 대기실 구조를 대기실별로 담은 2차원 문자열 배열 매개변수로 주어짐.
+             // 대기실 구조를 대기실별로 담은 2차원 문자열 배열 매개변수로 주어짐.
 	public static String solution(String[][] places) {
 		int[] answer = new int[places.length];
 		int index = 0;
