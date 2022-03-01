@@ -14,9 +14,9 @@ public class Lv2_124나라의숫자 {
      1) n % 3 = 1
         n = n / 3 = 2
 
-	 2) n % 3 = 2
-	    n = n /3 = 0
-         답 : 21
+     2) n % 3 = 2
+        n = n /3 = 0
+        답 : 21
 **/
    public static String solution(int n) {
       // 나머지 연산으로 나온 숫자를 인덱스로 하는 124 나라의 숫자를 나타내는 배열 초기 선언.
