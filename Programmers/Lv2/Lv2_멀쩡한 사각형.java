@@ -20,16 +20,16 @@ public class Lv2_멀쩡한사각형 {
 		System.out.println(solution(8, 12));
 	}
 	public static long solution(int w, int h) {
-        long answer = 1;
-        long x = w;
-        long y = h;
-        long gcd = gcd(x,y);
-        answer = ( x * y ) - (x + y - gcd);
-        return answer;
-    }
+		long answer = 1;
+		long x = w;
+		long y = h;
+		long gcd = gcd(x,y);
+		answer = ( x * y ) - (x + y - gcd);
+		return answer;
+    	}
     
-    public static long gcd(long x, long y){ //최대 공약수 알고리즘 - 호재법을 이용하여 직접 gcd 구현
-        if(y == 0) return x;
-        return gcd(y, x % y);
-    }
+        public static long gcd(long x, long y){ //최대 공약수 알고리즘 - 호재법을 이용하여 직접 gcd 구현
+		if(y == 0) return x;
+		return gcd(y, x % y);
+        }
 }
