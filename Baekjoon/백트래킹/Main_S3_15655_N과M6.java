@@ -2,7 +2,7 @@ package BOJ;
 import java.io.*;
 import java.util.*;
 // 조합 문제
-public class Main_S3_15654_N과M6 {
+public class Main_S3_15655_N과M6 {
 	static int N, M;
 	static int [] numbers, inputs;
 	static boolean [] isSelected;
