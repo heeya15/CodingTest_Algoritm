@@ -5,7 +5,6 @@ import java.util.*;
 public class Main_S3_15655_N과M6 {
 	static int N, M;
 	static int [] numbers, inputs;
-	static boolean [] isSelected;
 	static StringBuilder sb = new StringBuilder();
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
