@@ -34,21 +34,21 @@ public class Lv2_수식최대화 {
 		if(depth == 3) {  // 3가지 연산자를 조합 골랐을 경우
 			 System.out.println("hi"+Arrays.toString(temp));
 			 ArrayList<Long> copy_numbers = new ArrayList<>(numbers); // ArrayList 원본을 인쇄 함
-	         ArrayList<Character> copy_ops = new ArrayList<Character>(ops); // ArrayList 원본을 인쇄 함
-//	         System.out.println(copy_Ops.size());
-		     for(int i=0;i<temp.length;i++){
-		        for(int j=0; j< copy_ops.size(); j++){
-		            if(temp[i] == copy_ops.get(j)){
-		            	long num = cal(copy_numbers.remove(j),copy_numbers.remove(j), temp[i]);
-		            	copy_numbers.add(j, num);
-		                copy_ops.remove(j);
-		                j--; //전체 적으로 ArrayList의 크기가 하나 줄어서 -1로 하나씩 사이즈를 땡겨준다.
-		            }
-		        }
-		     }
-		     // [ 우승 상금은 ] 연산자 우선 순위 조합으로 계산한 수식의 결과 값에 절대값을 취한 것이 가장 큰 값이 된다.
-		     answer = Math.max(answer, Math.abs(copy_numbers.get(0)));
-		     return;
+			 ArrayList<Character> copy_ops = new ArrayList<Character>(ops); // ArrayList 원본을 인쇄 함
+	//	         System.out.println(copy_Ops.size());
+			 for(int i=0;i<temp.length;i++){
+			     for(int j=0; j< copy_ops.size(); j++){
+				  if(temp[i] == copy_ops.get(j)){
+					long num = cal(copy_numbers.remove(j),copy_numbers.remove(j), temp[i]);
+					copy_numbers.add(j, num);
+					copy_ops.remove(j);
+					j--; //전체 적으로 ArrayList의 크기가 하나 줄어서 -1로 하나씩 사이즈를 땡겨준다.
+				  }
+			     }
+			 }
+			// [ 우승 상금은 ] 연산자 우선 순위 조합으로 계산한 수식의 결과 값에 절대값을 취한 것이 가장 큰 값이 된다.
+			answer = Math.max(answer, Math.abs(copy_numbers.get(0)));
+			return;
 		}
 		
 		for(int i =0; i < 3; i++) {
