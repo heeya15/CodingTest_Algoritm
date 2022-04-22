@@ -1,7 +1,7 @@
 package BOJ;
 import java.io.*;
 import java.util.*;
-public class Main_S2_1058_친구 {
+public class Main_B2_1075_나누기 {
 
 	public static void main(String[] args) throws Exception{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
