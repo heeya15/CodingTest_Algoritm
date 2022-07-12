@@ -26,11 +26,11 @@ public class Lv2_영어끝말잇기 {
 	public static void main(String[] args) {
 		String words[] = { "tank", "kick", "know", "wheel", "land",
 				          "dream", "mother", "robot", "tank" };
-		System.out.println(solution(3, words)); // 답 :[3,3]
+		System.out.println(Arrays.toString(solution(3, words))); // 답 :[3,3]
 		String words1[] = { "hello", "observe", "effect", "take", "either", 
 				           "recognize", "encourage", "ensure", "establish", "hang", 
 				           "gather", "refer", "reference", "estimate", "executive" };
-		System.out.println(solution(3, words1)); // 답 :[0,0]
+		System.out.println(Arrays.toString(solution(3, words1))); // 답 :[0,0]
 	}
 
 	public static int[] solution(int n, String[] words) {
